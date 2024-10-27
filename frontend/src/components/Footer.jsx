@@ -21,8 +21,8 @@ const Footer = () => {
           <ul className="flex flex-col gap-1 text-gray-600">
             <NavLink to='/'> <li>HOME</li> </NavLink>
             <NavLink to='/about'> <li>ABOUT US</li> </NavLink>
-            <NavLink> <li>DELIVERY</li> </NavLink>
-            <NavLink> <li>PRIVACY POLICY</li> </NavLink>
+            <li>DELIVERY</li>
+             <li>PRIVACY POLICY</li> 
           </ul>
         </div>
 
