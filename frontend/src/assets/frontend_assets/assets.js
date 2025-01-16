@@ -14,7 +14,8 @@ import menu_icon from './menu_icon.png'
 import about_img from './about_img.png'
 import contact_img from './contact_img.png'
 import cross_icon from './cross_icon.png'
-import size_chart from './size_chart.png'
+import size_chart from './size_chart.jpg'
+import banner from './streetnest_banner.jpg'
 
 
 export const assets = {
@@ -34,5 +35,6 @@ export const assets = {
     about_img,
     contact_img,
     cross_icon,
-    size_chart
+    size_chart,
+    banner
 }

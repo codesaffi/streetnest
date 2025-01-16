@@ -3,7 +3,7 @@ import Title from "../components/Title";
 import { assets } from "../assets/frontend_assets/assets";
 import NewsLetterBox from "../components/NewsLetterBox";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faInstagram} from '@fortawesome/free-brands-svg-icons'
+import {faInstagram, faFacebook, faTiktok} from '@fortawesome/free-brands-svg-icons'
 import { NavLink } from "react-router-dom";
 
 const Contact = () => {
@@ -22,7 +22,7 @@ const Contact = () => {
         <div className=" flex flex-col justify-center items-start gap-6">
           <p className=" font-semibold text-xl text-gray-600">Our Store</p>
           <p className=" text-gray-500">
-            Jehlum,Punjab,Pakistan
+            Pakistan
           </p>
           <p className=" to-gray-500">
             Tel: 0340-5658267
@@ -31,11 +31,22 @@ const Contact = () => {
           <p className=" font-semibold text-xl text-gray-600">
             Socials
           </p>
-          <p className=" text-gray-500">
-            <NavLink to='https://www.instagram.com/thestreetnest?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='>
-            <FontAwesomeIcon className=" h-8 text-red-900" icon={faInstagram} />
-            </NavLink>
-          </p>
+          <p className="text-gray-500">
+
+  <NavLink to="https://www.instagram.com/thestreetnest?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+    <FontAwesomeIcon className="h-8 text-red-900 mx-2" icon={faInstagram} />
+    </NavLink>
+
+    <NavLink to="https://www.tiktok.com/@thestreetnest?_t=ZS-8t5jmf267dg&_r=1">
+    <FontAwesomeIcon className="h-8 text-black mx-2" icon={faTiktok} />
+    </NavLink>
+
+    <NavLink to="https://www.facebook.com/share/163Uxqct2r/?mibextid=wwXIfr">
+    <FontAwesomeIcon className="h-8 text-blue-900 mx-2" icon={faFacebook} />
+    </NavLink>
+    
+</p>
+
           <p className=" font-semibold text-xl text-gray-600">
             Careers at Forever
           </p>
