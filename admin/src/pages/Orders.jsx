@@ -57,11 +57,8 @@ const Orders = ( {token} ) => {
               <div>
               <div>
                 {order.items.map((item,index)=>{
-                  if (index === order.items.length - 1) {
-                    return <p className=' py-0.5' key={index}> {item.name} x {item.quantity} <span> {item.size} </span></p>
-                  } else {
-                    return <p className=' py-0.5' key={index}> {item.name} x {item.quantity} <span> {item.size} </span></p>
-                  }
+                  const sizeText = item.subCategory === "Jewellery" ? "No Size" : item.size;
+                  return <p className=' py-0.5' key={index}> {item.name} x {item.quantity} <span> {sizeText} </span></p>
                 })}
               </div>
               <p className=' mt-3 mb-2 font-medium'>{order.address.firstName + " " + order.address.lastName}</p>
