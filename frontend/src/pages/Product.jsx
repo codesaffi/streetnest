@@ -69,7 +69,9 @@ const Product = () => {
             {productData.description}
           </p>
           <div className=" flex flex-col gap-4 my-8">
-            {productData.subCategory !== "Jewellery" && (
+            {!["Jewellery", "Fragrances", "Accessories"].includes(
+              productData.subCategory
+            ) && (
               <>
                 <p>Select Size</p>
                 <div className="flex gap-2">
@@ -89,7 +91,16 @@ const Product = () => {
             )}
           </div>
           <button
-            onClick={() => addToCart(productData._id, productData.subCategory === "Jewellery" ? undefined : size)}
+            onClick={() =>
+              addToCart(
+                productData._id,
+                ["Jewellery", "Fragrances", "Accessories"].includes(
+                  productData.subCategory
+                )
+                  ? undefined
+                  : size
+              )
+            }
             className=" bg-black text-white px-8 py-3 text-sm active:bg-gray-700"
           >
             ADD TO CART
@@ -113,14 +124,7 @@ const Product = () => {
           >
             Description
           </button>
-          {/* <button
-            onClick={() => setShowDescription("reviews")}
-            className={`border px-5 py-3 text-sm ${
-              showDescription === "reviews" ? "font-bold" : ""
-            }`}
-          >
-            Reviews(122)
-          </button> */}
+
           <button
             onClick={() => setShowDescription("size chart")}
             className={`border px-5 py-3 text-sm ${
