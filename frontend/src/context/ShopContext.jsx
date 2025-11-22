@@ -16,7 +16,7 @@ const ShopContextProvider = (props) => {
 
   const addToCart = async (itemId, size) => {
     const product = products.find((p) => p._id === itemId);
-    if (product && product.subCategory !== "Jewellery" && !size) {
+    if (product && product.subCategory !== "Fragrances" || product.subCategory !== "Accessories" && !size) {
       toast.error("Select Product Size");
       return;
     }
