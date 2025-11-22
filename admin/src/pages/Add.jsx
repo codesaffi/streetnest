@@ -100,16 +100,16 @@ const Add = ({token}) => {
               <select onChange={(e)=>setCategory(e.target.value)} className=' w-full px-3 py-2'>
                 <option value="Men">Men</option>
                 <option value="Women">Women</option>
-                <option value="Kids">Unisex</option>
+                <option value="Unisex">Unisex</option>
               </select>
             </div>
 
             <div>
               <p className=' mb-2'>Sub category</p>
               <select onChange={(e)=>setSubCategory(e.target.value)} className=' w-full px-3 py-2'>
-                <option value="Topwear">Hoodies/SweatShirts</option>
-                <option value="Jewellery">Fragrances</option>
-                <option value="Winterwear">Accessories</option>
+                <option value="Hoodies/SweatShirts">Hoodies/SweatShirts</option>
+                <option value="Fragrances">Fragrances</option>
+                <option value="Accessories">Accessories</option>
               </select>
             </div>
 
@@ -120,7 +120,7 @@ const Add = ({token}) => {
           </div>
 
           <div>
-            {subCategory !== "Jewellery" && (
+            {subCategory === "Hoodies/SweatShirts" && (
               <>
                 <p className=' mb-2'>Product Sizes</p>
                 <div className='flex gap-3'>
